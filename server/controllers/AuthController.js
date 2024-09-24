@@ -41,7 +41,7 @@ export const login = async (req, res, next) => {
         if (!email || !password){
             return res.status(400).send("Email and password are required");
         }
-        const user = await User.findOne({email}, 'id email profileSetup firstName lastName image color', );
+        const user = await User.findOne({email});
         if (!user){
             return res.status(404).send("User with the given email not found");
         }
@@ -55,7 +55,7 @@ export const login = async (req, res, next) => {
             secure: true,
             sameSite: "none",
         });
-        return res.status(200).json({
+        return res.json({
             user: {
                 id: user.id,
                 email: user.email,
