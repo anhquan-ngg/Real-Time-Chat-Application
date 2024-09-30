@@ -8,10 +8,11 @@ import {FaPlus, FaTrash} from "react-icons/fa";
 import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
 import {toast} from "sonner";
-import { UPDATE_PROFILE_ROUTE, ADD_PROFILE_IMAGE_ROUTE} from '@/utils/constants';
+import { UPDATE_PROFILE_ROUTE, ADD_PROFILE_IMAGE_ROUTE, REMOVE_PROFILE_IMAGE_ROUTE} from '@/utils/constants';
 import { apiClient } from '@/lib/api-client';
 import { useEffect } from 'react';
 import {HOST} from '@/utils/constants';
+
 const Profile = () => {
     const navigate = useNavigate();
     const {userInfo, setUserInfo} = useAppStore();
@@ -94,7 +95,18 @@ const Profile = () => {
     }
 
     const handleImageDelete = async (event) => {
-        console.log("Image deleted");
+        try {
+            const response = await apiClient.delete(REMOVE_PROFILE_IMAGE_ROUTE, {
+                withCredentials: true,
+            });
+            if (response.status === 200){
+                setUserInfo({...userInfo, image: null});
+                toast.success("Image removed successfully");
+                setImage(null);
+            }
+        } catch (err) {
+            console.log(err);
+        }
     }
 
     return (
