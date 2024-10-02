@@ -56,7 +56,7 @@ const Auth = () => {
             );
             if (response.data.user.id){
                 setUserInfo(response.data.user);
-                if (response.data.user.profileSetup) navigate('/chat');
+                if (response.data.profileSetup) navigate('/chat');
                 else navigate('/profile');
             }
             console.log({response});
