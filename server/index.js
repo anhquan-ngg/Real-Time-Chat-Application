@@ -6,6 +6,7 @@ import cookieParser from 'cookie-parser';
 import mongoose from 'mongoose';
 import authRoutes from './routes/AuthRoutes.js';
 import contactRoutes from './routes/ContactRoutes.js';
+import setupSocket from "./socket.js";
 
 dotenv.config();
 
@@ -15,8 +16,8 @@ const databaseURL = process.env.DATABASE_URL;
 
 app.use(
     cors({
-        origin: [process.env.ORIGIN],
-        methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
+        origin: process.env.ORIGIN,
+        methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
         credentials: true,
     })
 );
@@ -29,9 +30,11 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/contacts', contactRoutes);
 
-app.listen(port, ()=>{
+const server = app.listen(port, ()=>{
     console.log(`Server started on port ${port}`);
 });
+
+setupSocket(server);
 
 mongoose.connect(databaseURL)
     .then(() => console.log('Connected to DB successfully.'))

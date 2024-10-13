@@ -51,7 +51,7 @@ const ProfileInfo = () => {
                         )}
                     </Avatar>
                 </div>
-                <div>
+                <div className="poppins-medium">
                     {
                         userInfo.firstName && userInfo.lastName ? `${userInfo.firstName} ${userInfo.lastName}` : ""
                     }
