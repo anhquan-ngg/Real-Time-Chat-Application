@@ -31,6 +31,7 @@ const setupSocket = (server) => {
                 recipient: message.recipient,
                 messageType: message.messageType,
                 content: message.content,
+                fileUrl: message.fileUrl,
             });
             await createdMessage.save();
             const messageData = await Message.findById(createdMessage._id)
@@ -58,6 +59,7 @@ const setupSocket = (server) => {
 
         socket.on('sendMessage',(message) =>  sendMessage(message));
         socket.on('disconnect', () => disconnect(socket));
+        // socket.on('fileUpload')
     });
 };
 
