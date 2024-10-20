@@ -1,5 +1,7 @@
 import User from "../models/UserModel.js";
 import Channel from "../models/ChannelModel.js";
+import Message from "../models/MessagesModel.js"
+import mongoose from "mongoose";
 
 export const createChannel = async (req, res, next) =>  {
     try {
@@ -26,6 +28,42 @@ export const createChannel = async (req, res, next) =>  {
         await newChannel.save();
         return res.status(201).send({channel: newChannel});
     } catch(error) {
+        console.log({error});
+        return res.status(500).send("Internal Server Error");
+    }
+}
+
+export const getUserChannels = async (req, res, next) =>  {
+    try {
+        const userId = new mongoose.Types.ObjectId(req.userId);
+        const channels = await Channel.find({
+           $or: [{admin: userId}, {members: userId}],
+        }).sort({updatedAt: -1});
+
+        return res.status(201).send({channels: channels});
+    } catch(error) {
+        console.log({error});
+        return res.status(500).send("Internal Server Error");
+    }
+}
+
+export const getChannelMessages = async (req, res, next) => {
+    try{
+        const {channelId} = req.params;
+        const channel = await Channel.findById(channelId).populate({
+            path:"messages",
+            populate: {
+                path: "sender",
+                select: "firstName lastName email _id image color",
+            },
+        });
+
+        if (!channel) {
+            return res.status(404).send("Channel not found");
+        }
+        const messages = channel.messages;
+        return res.status(201).json({messages});
+    } catch(error){
         console.log({error});
         return res.status(500).send("Internal Server Error");
     }
