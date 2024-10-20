@@ -8,7 +8,7 @@ import ContactList from "@/components/ui/contact-list.jsx";
 import CreateChannel from "@/pages/chat/components/contacts-container/components/create-channel/index.jsx";
 
 const ContactsContainer = () => {
-    const {directMessagesContacts, setDirectMessagesContacts} = useAppStore();
+    const {directMessagesContacts, setDirectMessagesContacts, channels} = useAppStore();
 
     useEffect(() => {
         const getContacts = async () => {
@@ -67,11 +67,14 @@ const ContactsContainer = () => {
         </div>
         <div className="my-5">
             <div className="flex items-center justify-between pr-10">
-                <Title text="Channels" />
+                <Title text="Channels"/>
                 <CreateChannel/>
             </div>
+            <div className="h-[38vp] overflow-y-auto scrollbar-hidden">
+                <ContactList contacts={channels} isChannel={true} />
+            </div>
         </div>
-        <ProfileInfo />
+        <ProfileInfo/>
     </div>
   );
 };
