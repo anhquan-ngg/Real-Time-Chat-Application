@@ -7,6 +7,7 @@ import { useSocket } from '@/Context/SocketContext';
 import { useAppStore } from '@/store';
 import {UPLOAD_FILE_ROUTE} from "@/utils/constants.js";
 import {apiClient} from "@/lib/api-client.js";
+import {Input} from "@/components/ui/input.jsx"
 
 const MessageBar = () => {
   const emojiRef = useRef();
@@ -30,25 +31,27 @@ const MessageBar = () => {
   }
 
   const handleSendMessage = async () => {
-    if (selectedChatType === "contact"){
-      socket.emit("sendMessage", {
-        sender: userInfo.id,
-        recipient: selectedChatData._id,
-        messageType: "text",
-        content: message,
-        fileUrl: undefined,
-      });
-    }
-    else if (selectedChatType === "channel"){
-      socket.emit("send-channel-message", {
-        sender: userInfo.id,
-        messageType: "text",
-        content: message,
-        fileUrl: undefined,
-        channelId: selectedChatData._id,
-      });
-    }
-    setMessage("");
+    if (message) {
+      if (selectedChatType === "contact"){
+        socket.emit("sendMessage", {
+          sender: userInfo.id,
+          recipient: selectedChatData._id,
+          messageType: "text",
+          content: message,
+          fileUrl: undefined,
+        });
+      }
+      else if (selectedChatType === "channel"){
+        socket.emit("send-channel-message", {
+          sender: userInfo.id,
+          messageType: "text",
+          content: message,
+          fileUrl: undefined,
+          channelId: selectedChatData._id,
+        });
+      }
+      setMessage("")
+    };
   }
 
   const handleAttachmentClick = () => {
@@ -104,12 +107,17 @@ const MessageBar = () => {
   return (
     <div className="h-[10vh] bg-[#1c1d25] flex justify-center items-center px-8 mb-6 gap-6">
       <div className="flex-1 flex bg-[#2a2b33] rounded-md items-center gap-5 pr-5">
-        <input
+        <Input
             type="text"
-            className="flex-1 p-5 bg-transparent round-md focus:border-none focus:outline-none"
+            className="flex-1 p-5 bg-transparent round-md border-none focus:border-none focus:outline-none "
             placeholder="Enter Message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
+            onKeyUp={(e) => {
+              if (e.key === "Enter"){
+                handleSendMessage();
+              }
+            }}
         />
         <button
             className="text-neutral-500 focus:border-none focus:outline-none focus:text-white duration-300 transition-all"

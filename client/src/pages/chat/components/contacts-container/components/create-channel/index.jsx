@@ -25,7 +25,7 @@ import MultipleSelector from "@/components/ui/multipleselect.jsx";
 
 const CreateChannel = () => {
     const {setSelectedChatType, setSelectedChatData, addChannel} = useAppStore();
-    const [newChannelModal, setNewChannelModal] = useState(false);
+    const [openNewChannelModal, setOpenNewChannelModal] = useState(false)
     const [allContacts, setAllContacts] = useState([]);
     const [selectedContacts, setSelectedContacts] = useState([]);
     const [channelName, setChannelName] = useState("");
@@ -51,18 +51,17 @@ const CreateChannel = () => {
                         members: selectedContacts.map((contact) => (contact.value)),
                     },
                     {withCredentials: true});
-                if (response.status === 200) {
+                if (response.status === 201) {
                     setChannelName("");
                     setSelectedContacts([]);
-                    setNewChannelModal(false);
+                    setOpenNewChannelModal(false);
+                    setSelectedChatType("channel");
                     addChannel(response.data.channel);
                 }
             }
         } catch (error){
             console.log({error});
         }
-
-
     }
 
     return (
@@ -73,7 +72,7 @@ const CreateChannel = () => {
                         <FaPlus
                             className="text-neutral-400 font-light text-opacity-90
                             hover:text-neutral-100 cursor-pointer transition-all duration-300"
-                            onClick={() => setNewChannelModal(true)}
+                            onClick={() => setOpenNewChannelModal(true)}
                         />
                     </TooltipTrigger>
                     <TooltipContent className="bg-[#1c1b1e] border-none mb-2 p-3 text-white">
@@ -81,7 +80,7 @@ const CreateChannel = () => {
                     </TooltipContent>
                 </Tooltip>
             </TooltipProvider>
-            <Dialog open={newChannelModal} onOpenChange={setNewChannelModal}>
+            <Dialog open={openNewChannelModal} onOpenChange={setOpenNewChannelModal}>
                 <DialogContent className="bg-[#181920] border-none text-white w-[400px] h-[400px] flex flex-col">
                     <DialogHeader>
                         <DialogTitle>
