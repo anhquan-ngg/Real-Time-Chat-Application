@@ -56,6 +56,7 @@ const CreateChannel = () => {
                     setSelectedContacts([]);
                     setOpenNewChannelModal(false);
                     setSelectedChatType("channel");
+                    setSelectedChatData(response.data.channel);
                     addChannel(response.data.channel);
                 }
             }
