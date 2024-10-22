@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="07bb401d-1042-484e-89ce-f6d845bd2ef3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Chat Application.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/ui/contact-list.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ui/contact-list.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/chat/components/chat-container/chat-header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/chat/components/chat-container/chat-header/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/chat/components/contacts-container/components/create-channel/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/chat/components/contacts-container/components/create-channel/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/store/slices/chat-slice.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/slices/chat-slice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/utils/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/.env" beforeDir="false" afterPath="$PROJECT_DIR$/server/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/ChannelController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/ChannelController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/color-support.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/color-support.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/mime.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/mime.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/mkdirp.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/mkdirp.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/node-pre-gyp.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/node-pre-gyp.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/nodemon.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/nodemon.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/nodetouch.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/nodetouch.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/nopt.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/nopt.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/rimraf.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/rimraf.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/semver.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/semver.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/@types/webidl-conversions/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/@types/webidl-conversions/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/@types/whatwg-url/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/@types/whatwg-url/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/bcrypt/appveyor.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/bcrypt/appveyor.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/make-dir/node_modules/.bin/semver.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/make-dir/node_modules/.bin/semver.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/node-fetch/node_modules/whatwg-url/lib/url-state-machine.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/node-fetch/node_modules/whatwg-url/lib/url-state-machine.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/sift/es5m/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/sift/es5m/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/sift/lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/sift/lib/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/sift/sift.csp.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/sift/sift.csp.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/simple-update-notifier/build/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/simple-update-notifier/build/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/ChannelRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/ChannelRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/uploads/files/1729516638984/KIÃÌM TRA QUY CHÃÌ DAÌNH CHO K69.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/uploads/files/1729516649935/btl-he-dieu-hanh.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/uploads/files/1729516658991/Screenshot 2024-10-08 212018 (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/uploads/profiles/1729516464934avatar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/uploads/profiles/1729516576324avatar-cat.jpg" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2lup6CuxyXRcHCIviPGRWrkBS9C" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Node.js.App.jsx.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.socket.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.15.1&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.15.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/MY LENOVO/OneDrive - Hanoi University of Science and Technology/Desktop/Chat Application&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2024.2.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MY LENOVO\OneDrive - Hanoi University of Science and Technology\Desktop\Chat Application\client\src\assets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\MY LENOVO\OneDrive - Hanoi University of Science and Technology\Desktop\Chat Application\client\src\components\ui" />
+      <recent name="C:\Users\MY LENOVO\OneDrive - Hanoi University of Science and Technology\Desktop\Chat Application\client\src\pages\chat\components\contacts-container\components" />
+      <recent name="C:\Users\MY LENOVO\OneDrive - Hanoi University of Science and Technology\Desktop\Chat Application\client\src\components" />
+      <recent name="C:\Users\MY LENOVO\OneDrive - Hanoi University of Science and Technology\Desktop\Chat Application\client\src" />
+      <recent name="C:\Users\MY LENOVO\OneDrive - Hanoi University of Science and Technology\Desktop\Chat Application\client\public" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-WS-242.21829.149" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="07bb401d-1042-484e-89ce-f6d845bd2ef3" name="Changes" comment="" />
+      <created>1726039638670</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1726039638670</updated>
+      <workItem from="1726039642326" duration="10715000" />
+      <workItem from="1726061418423" duration="5494000" />
+      <workItem from="1726101469326" duration="2129000" />
+      <workItem from="1726104098599" duration="223000" />
+      <workItem from="1726134111682" duration="3128000" />
+      <workItem from="1726143950077" duration="3434000" />
+      <workItem from="1726236567792" duration="2440000" />
+      <workItem from="1726279293193" duration="2628000" />
+      <workItem from="1726281958162" duration="136000" />
+      <workItem from="1726322051754" duration="925000" />
+      <workItem from="1726358261947" duration="5000" />
+      <workItem from="1726501063356" duration="1000" />
+      <workItem from="1726651693708" duration="1000" />
+      <workItem from="1726682822636" duration="7721000" />
+      <workItem from="1726732328957" duration="141000" />
+      <workItem from="1726847368766" duration="1318000" />
+      <workItem from="1727074167704" duration="596000" />
+      <workItem from="1727101809243" duration="1393000" />
+      <workItem from="1727108119099" duration="2507000" />
+      <workItem from="1727517701797" duration="9000" />
+      <workItem from="1728312077202" duration="1976000" />
+      <workItem from="1728406151271" duration="6611000" />
+      <workItem from="1728445673681" duration="13335000" />
+      <workItem from="1728461311391" duration="1006000" />
+      <workItem from="1728871309124" duration="126000" />
+      <workItem from="1728871437356" duration="1959000" />
+      <workItem from="1728891051575" duration="799000" />
+      <workItem from="1728891872477" duration="9551000" />
+      <workItem from="1728906248355" duration="584000" />
+      <workItem from="1729003588441" duration="8207000" />
+      <workItem from="1729072830213" duration="3223000" />
+      <workItem from="1729076158824" duration="2000" />
+      <workItem from="1729076830175" duration="1000" />
+      <workItem from="1729100793253" duration="1000" />
+      <workItem from="1729102781707" duration="2000" />
+      <workItem from="1729183694472" duration="5756000" />
+      <workItem from="1729242609534" duration="7353000" />
+      <workItem from="1729264210879" duration="741000" />
+      <workItem from="1729332653596" duration="13105000" />
+      <workItem from="1729392456673" duration="31139000" />
+      <workItem from="1729454634624" duration="161000" />
+      <workItem from="1729472982989" duration="3407000" />
+      <workItem from="1729481904753" duration="5472000" />
+      <workItem from="1729495893897" duration="5174000" />
+      <workItem from="1729516341233" duration="879000" />
+      <workItem from="1729601671422" duration="8000" />
+      <workItem from="1729611086421" duration="5153000" />
+      <workItem from="1729616296312" duration="590000" />
+      <workItem from="1729616898908" duration="276000" />
+      <workItem from="1729617184695" duration="181000" />
+      <workItem from="1729617373808" duration="341000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

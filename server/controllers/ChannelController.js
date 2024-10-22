@@ -68,3 +68,14 @@ export const getChannelMessages = async (req, res, next) => {
         return res.status(500).send("Internal Server Error");
     }
 }
+
+export const deleteChannel = async (req, res, next) => {
+    try{
+        const {channelId} = req.params;
+        await Channel.deleteOne({_id: channelId});
+        return res.status(200).send("Delete channel successfully");
+    } catch(error){
+        console.log({error});
+        return res.status(500).send("Internal Server Error");
+    }
+}

@@ -14,11 +14,8 @@ import {
     DialogTitle,
 } from "@/components/ui/dialog"
 import {Input} from "@/components/ui/input";
-import Lottie from "react-lottie";
 import {apiClient} from "@/lib/api-client.js";
 import {CREATE_CHANNEL_ROUTE, GET_ALL_CONTACTS_ROUTES} from "@/utils/constants.js";
-import {ScrollArea} from "@/components/ui/scroll-area.jsx";
-import {Avatar, AvatarImage} from "@/components/ui/avatar.jsx";
 import {useAppStore} from "@/store/index.js";
 import {Button} from "@/components/ui/button.jsx"
 import MultipleSelector from "@/components/ui/multipleselect.jsx";
@@ -56,7 +53,6 @@ const CreateChannel = () => {
                     setSelectedContacts([]);
                     setOpenNewChannelModal(false);
                     setSelectedChatType("channel");
-                    setSelectedChatData(response.data.channel);
                     addChannel(response.data.channel);
                 }
             }
