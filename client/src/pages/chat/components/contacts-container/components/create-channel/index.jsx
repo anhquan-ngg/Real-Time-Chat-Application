@@ -21,7 +21,7 @@ import {Button} from "@/components/ui/button.jsx"
 import MultipleSelector from "@/components/ui/multipleselect.jsx";
 
 const CreateChannel = () => {
-    const {setSelectedChatType, addChannel} = useAppStore();
+    const {setSelectedChatType, addChannel, setSelectedChatData} = useAppStore();
     const [openNewChannelModal, setOpenNewChannelModal] = useState(false)
     const [allContacts, setAllContacts] = useState([]);
     const [selectedContacts, setSelectedContacts] = useState([]);
@@ -53,6 +53,7 @@ const CreateChannel = () => {
                     setSelectedContacts([]);
                     setOpenNewChannelModal(false);
                     setSelectedChatType("channel");
+                    setSelectedChatData(response.data.channel);
                     addChannel(response.data.channel);
                 }
             }

@@ -6,11 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="07bb401d-1042-484e-89ce-f6d845bd2ef3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ui/contact-list.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ui/contact-list.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/chat/components/chat-container/chat-header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/chat/components/chat-container/chat-header/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/ui/input.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ui/input.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/auth/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/auth/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/chat/components/chat-container/message-bar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/chat/components/chat-container/message-bar/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/chat/components/chat-container/message-container/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/chat/components/chat-container/message-container/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/chat/components/contacts-container/components/create-channel/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/chat/components/contacts-container/components/create-channel/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/profile/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/profile/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/store/slices/chat-slice.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/slices/chat-slice.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +137,7 @@
       <workItem from="1729616898908" duration="276000" />
       <workItem from="1729617184695" duration="181000" />
       <workItem from="1729617373808" duration="953000" />
-      <workItem from="1729647471574" duration="6758000" />
+      <workItem from="1729647471574" duration="9834000" />
     </task>
     <servers />
   </component>

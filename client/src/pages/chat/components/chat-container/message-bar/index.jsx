@@ -109,7 +109,7 @@ const MessageBar = () => {
       <div className="flex-1 flex bg-[#2a2b33] rounded-md items-center gap-5 pr-5">
         <Input
             type="text"
-            className="flex-1 p-5 bg-transparent round-md border-none focus:border-none focus:outline-none "
+            className="flex-1 p-5 bg-transparent rounded-md border-0 focus:border-0 focus:outline-none"
             placeholder="Enter Message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
@@ -120,7 +120,7 @@ const MessageBar = () => {
             }}
         />
         <button
-            className="text-neutral-500 focus:border-none focus:outline-none focus:text-white duration-300 transition-all"
+            className="text-neutral-500 focus:border-1 focus:outline-none focus:text-white duration-300 transition-all"
             onClick={handleAttachmentClick}
         >
           <GrAttachment className="text-2xl"/>

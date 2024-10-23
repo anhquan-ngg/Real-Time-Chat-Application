@@ -217,7 +217,7 @@ const MessageContainer = () => {
                             >
                                 {message.sender.firstName
                                     ? message.sender.firstName.split("").shift()
-                                    : message.sender.email.split("").shift()
+                                    : (message.sender.email ? message.sender.email.split("").shift() : "")
                                 }
                             </AvatarFallback>
                         </Avatar>
