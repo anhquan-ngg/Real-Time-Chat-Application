@@ -5,44 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07bb401d-1042-484e-89ce-f6d845bd2ef3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Chat Application.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/ui/contact-list.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ui/contact-list.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/chat/components/chat-container/chat-header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/chat/components/chat-container/chat-header/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/chat/components/contacts-container/components/create-channel/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/chat/components/contacts-container/components/create-channel/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/profile/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/profile/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/store/slices/chat-slice.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/slices/chat-slice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/utils/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/.env" beforeDir="false" afterPath="$PROJECT_DIR$/server/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/ChannelController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/ChannelController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/color-support.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/color-support.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/mime.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/mime.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/mkdirp.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/mkdirp.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/node-pre-gyp.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/node-pre-gyp.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/nodemon.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/nodemon.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/nodetouch.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/nodetouch.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/nopt.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/nopt.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/rimraf.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/rimraf.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/semver.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/semver.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/@types/webidl-conversions/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/@types/webidl-conversions/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/@types/whatwg-url/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/@types/whatwg-url/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/bcrypt/appveyor.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/bcrypt/appveyor.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/make-dir/node_modules/.bin/semver.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/make-dir/node_modules/.bin/semver.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/node-fetch/node_modules/whatwg-url/lib/url-state-machine.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/node-fetch/node_modules/whatwg-url/lib/url-state-machine.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/sift/es5m/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/sift/es5m/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/sift/lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/sift/lib/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/sift/sift.csp.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/sift/sift.csp.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/simple-update-notifier/build/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/simple-update-notifier/build/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/ChannelRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/ChannelRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/uploads/files/1729516638984/KIÃÌM TRA QUY CHÃÌ DAÌNH CHO K69.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/uploads/files/1729516649935/btl-he-dieu-hanh.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/uploads/files/1729516658991/Screenshot 2024-10-08 212018 (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/uploads/profiles/1729516464934avatar.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/uploads/profiles/1729516576324avatar-cat.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +136,8 @@
       <workItem from="1729616296312" duration="590000" />
       <workItem from="1729616898908" duration="276000" />
       <workItem from="1729617184695" duration="181000" />
-      <workItem from="1729617373808" duration="341000" />
+      <workItem from="1729617373808" duration="953000" />
+      <workItem from="1729647471574" duration="6758000" />
     </task>
     <servers />
   </component>

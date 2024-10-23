@@ -12,8 +12,7 @@ import {apiClient} from "@/lib/api-client.js";
 
 // eslint-disable-next-line react/prop-types
 const ContactList = ({contacts, isChannel = false}) => {
-    // eslint-disable-next-line no-unused-vars
-    const {selectedChatData, selectedChatType, setSelectedChatType, setSelectedChatData, setSelectedChatMessages, removeChannel} = useAppStore();
+    const {selectedChatData, setSelectedChatType, setSelectedChatData, setSelectedChatMessages, removeChannel} = useAppStore();
 
     const handleClick = (contact) => {
         if (isChannel) setSelectedChatType("channel");
@@ -31,7 +30,10 @@ const ContactList = ({contacts, isChannel = false}) => {
                 {withCredentials: true},
             );
             if (response.status === 200){
-                removeChannel(contact._id);
+                removeChannel(contact);
+                if (selectedChatData === contact) {
+                    setSelectedChatData([]);
+                }
             }
         } catch (error) {
             console.log({error});

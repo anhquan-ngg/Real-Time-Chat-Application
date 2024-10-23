@@ -2,7 +2,7 @@ import {useAppStore} from '@/store';
 import {useState, useRef} from 'react';
 import { useNavigate } from 'react-router-dom';
 import {IoArrowBack} from 'react-icons/io5';
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Avatar, AvatarImage} from "@/components/ui/avatar";
 import {colors, getColor} from '@/lib/utils.js';
 import {FaPlus, FaTrash} from "react-icons/fa";
 import {Input} from "@/components/ui/input";
@@ -94,7 +94,7 @@ const Profile = () => {
         }
     }
 
-    const handleImageDelete = async (event) => {
+    const handleImageDelete = async () => {
         try {
             const response = await apiClient.delete(REMOVE_PROFILE_IMAGE_ROUTE, {
                 withCredentials: true,

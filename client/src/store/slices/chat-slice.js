@@ -21,9 +21,9 @@ export const createChatSlice = (set, get) => ({
         const channels = get().channels;
         set({channels: [channel, ...channels]});
     },
-    removeChannel: (id) => {
+    removeChannel: (channel) => {
         const channels = get().channels;
-        const newChannels = channels.filter((c) => c._id !== id);
+        const newChannels = channels.filter((c) => c !== channel);
         set({channels: newChannels});
     },
     closeChat: () =>
