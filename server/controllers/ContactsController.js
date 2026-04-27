@@ -17,7 +17,7 @@ export const searchContacts = async (req, res, next) => {
         const regex = new RegExp(sanitizedSearchTerm, "i");
 
         const contacts = await User.find({
-            $and: [{_id: {$ne: res.userId}},
+            $and: [{_id: {$ne: req.userId}},
                 {
                     $or: [{firstName: regex}, {lastName: regex}, {email: regex}],
                 }

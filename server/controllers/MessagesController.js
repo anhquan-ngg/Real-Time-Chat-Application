@@ -10,14 +10,23 @@ export const getMessages = async (req, res, next) => {
             return res.status(400).send("Both user ID are required");
         }
 
+        const page = parseInt(req.query.page) || 1;
+        const limit = parseInt(req.query.limit) || 50;
+        const skip = (page - 1) * limit;
+
         const messages = await Message.find({
             $or: [
                 {sender: user1, recipient: user2},
                 {sender: user2, recipient: user1},
             ]
-        }).sort({timestamp: 1});
+        })
+        .sort({timestamp: -1})
+        .skip(skip)
+        .limit(limit);
 
-        return res.status(200).json({messages});
+        const formattedMessages = messages.reverse();
+
+        return res.status(200).json({messages: formattedMessages});
     } catch (error) {
         console.log({error});
         return res.status(500).send("Internal Server Error");

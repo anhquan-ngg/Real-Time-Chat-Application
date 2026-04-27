@@ -50,8 +50,17 @@ export const getUserChannels = async (req, res, next) =>  {
 export const getChannelMessages = async (req, res, next) => {
     try{
         const {channelId} = req.params;
+        const page = parseInt(req.query.page) || 1;
+        const limit = parseInt(req.query.limit) || 50;
+        const skip = (page - 1) * limit;
+
         const channel = await Channel.findById(channelId).populate({
             path:"messages",
+            options: {
+                sort: { timestamp: -1 },
+                skip: skip,
+                limit: limit
+            },
             populate: {
                 path: "sender",
                 select: "firstName lastName email _id image color",
@@ -61,7 +70,15 @@ export const getChannelMessages = async (req, res, next) => {
         if (!channel) {
             return res.status(404).send("Channel not found");
         }
-        const messages = channel.messages;
+
+        const isMember = channel.members.some(memberId => memberId.toString() === req.userId);
+        const isAdmin = channel.admin.toString() === req.userId;
+
+        if (!isMember && !isAdmin) {
+            return res.status(403).send("You don't have access to this channel's messages");
+        }
+
+        const messages = channel.messages.reverse();
         return res.status(201).json({messages});
     } catch(error){
         console.log({error});
@@ -72,6 +89,17 @@ export const getChannelMessages = async (req, res, next) => {
 export const deleteChannel = async (req, res, next) => {
     try{
         const {channelId} = req.params;
+        const channel = await Channel.findById(channelId);
+
+        if (!channel) {
+            return res.status(404).send("Channel not found");
+        }
+
+        if (channel.admin.toString() !== req.userId) {
+            return res.status(403).send("Only admin can delete the channel");
+        }
+
+        await Message.deleteMany({ _id: { $in: channel.messages } });
         await Channel.deleteOne({_id: channelId});
         return res.status(200).send("Delete channel successfully");
     } catch(error){

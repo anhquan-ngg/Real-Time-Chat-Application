@@ -15,33 +15,61 @@ const MessageContainer = () => {
     const [showImage, setShowImage] = useState(false);
     const [imageURL, setImageURL] = useState(null);
 
+  const [page, setPage] = useState(1);
+  const [hasMore, setHasMore] = useState(true);
+  const [isFetching, setIsFetching] = useState(false);
+
+  useEffect(() => {
+      setPage(1);
+      setHasMore(true);
+      setSelectedChatMessages([]);
+  }, [selectedChatData, selectedChatType, setSelectedChatMessages]);
+
   useEffect(() => {
     const getMessages = async () => {
+        if (isFetching || !hasMore) return;
+        setIsFetching(true);
         try {
           const response = await apiClient.post(
-              GET_ALL_MESSAGES_ROUTE,
+              `${GET_ALL_MESSAGES_ROUTE}?page=${page}&limit=50`,
               {id: selectedChatData._id},
               {withCredentials: true}
           );
           if (response.data.messages){
-            setSelectedChatMessages(response.data.messages);
+            if (response.data.messages.length < 50) setHasMore(false);
+            if (page === 1) setSelectedChatMessages(response.data.messages);
+            else {
+                const currentMessages = useAppStore.getState().selectedChatMessages;
+                setSelectedChatMessages([...response.data.messages, ...currentMessages]);
+            }
           }
         } catch (error){
           console.log({error});
+        } finally {
+          setIsFetching(false);
         }
     }
 
     const getChannelMessages = async () => {
+        if (isFetching || !hasMore) return;
+        setIsFetching(true);
         try {
             const response = await apiClient.get(
-                `${GET_CHANNEL_MESSAGES_ROUTE}/${selectedChatData._id}`,
+                `${GET_CHANNEL_MESSAGES_ROUTE}/${selectedChatData._id}?page=${page}&limit=50`,
                 {withCredentials: true},
             );
             if (response.data.messages){
-                setSelectedChatMessages(response.data.messages);
+                if (response.data.messages.length < 50) setHasMore(false);
+                if (page === 1) setSelectedChatMessages(response.data.messages);
+                else {
+                    const currentMessages = useAppStore.getState().selectedChatMessages;
+                    setSelectedChatMessages([...response.data.messages, ...currentMessages]);
+                }
             }
         } catch (error) {
             console.log({error});
+        } finally {
+            setIsFetching(false);
         }
     }
 
@@ -49,13 +77,24 @@ const MessageContainer = () => {
       if (selectedChatType === "contact") getMessages();
       else if  (selectedChatType === "channel") getChannelMessages();
     }
-  }, [selectedChatData, selectedChatType, setSelectedChatMessages])
+  }, [selectedChatData, selectedChatType, setSelectedChatMessages, page])
 
+  const prevMessagesLength = useRef(0);
+  
   useEffect(() => {
-    if (scrollRef.current) {
+    if (page === 1 && scrollRef.current) {
       scrollRef.current.scrollIntoView({behavior: "smooth"});
+    } else if (page > 1) {
+        // Optional: you can maintain scroll position here if needed
     }
-  }, [selectedChatMessages]);
+    prevMessagesLength.current = selectedChatMessages.length;
+  }, [selectedChatMessages, page]);
+
+  const handleScroll = (e) => {
+      if (e.target.scrollTop === 0 && hasMore && !isFetching) {
+          setPage(prev => prev + 1);
+      }
+  };
 
   const checkIfImage = (filepath) => {
       const imageRegex =
@@ -235,7 +274,10 @@ const MessageContainer = () => {
     )
 
     return (
-        <div className="flex-1 overflow-y-auto scrollbar-hidden p-4 px-8 md:w-[65vw] lg:w-[70vw] xl:w-[80vw] w-full">
+        <div 
+            className="flex-1 overflow-y-auto scrollbar-hidden p-4 px-8 md:w-[65vw] lg:w-[70vw] xl:w-[80vw] w-full"
+            onScroll={handleScroll}
+        >
             {renderMessage()}
             <div ref={scrollRef}/>
             {
